@@ -62,17 +62,22 @@ curl -X POST "https://yourmagento.com/rest/V1/order/update-status" \
     "message": "Order status updated successfully."
 }
 ```
+---
+
 ### Sample postman Request:
 ```json
 {
            "incrementId": "000000002",
            "status": "processing"
 }
+```
+
 ### Sample Postman Response:
 ```json
 {
     "message": "Order status updated successfully."
 }
+```
 
 ### Sample postman Request for order not found:
 ```json
@@ -80,6 +85,8 @@ curl -X POST "https://yourmagento.com/rest/V1/order/update-status" \
            "incrementId": "000000028",
            "status": "processing"
 }
+```
+
 ### Sample Postman Response:
 ```json
 {
@@ -161,9 +168,10 @@ public function updateStatus($incrementId, $status);
 ### 3️⃣ Module Not Showing in Admin
 **Solution:** Run:
 ```sh
-php bin/magento cache:flush
 php bin/magento setup:upgrade
+php bin/magento setup:di:co
 php bin/magento indexer:reindex
+php bin/magento cache:flush
 ```
 
 ---
