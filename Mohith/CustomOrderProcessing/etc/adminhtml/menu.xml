@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Mohith_CustomOrderProcessing::custom_order_processing_grid" title="Custom Order Processing"
+             module="Mohith_CustomOrderProcessing" sortOrder="150"
+             parent="Magento_Sales::sales_operation" action="customorderprocessing/index/index"
+             resource="Magento_Reports::custom_order_processing_grid"/>
+    </menu>
+</config>
+

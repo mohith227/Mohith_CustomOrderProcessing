@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Mohith\CustomOrderProcessing\Api\CustomOrderProcessingRepositoryInterface"
+                type="Mohith\CustomOrderProcessing\Model\CustomOrderProcessingRepository"/>
+    <preference for="Mohith\Contact\Api\Data\CustomOrderProcessingInterface"
+                type="Mohith\CustomOrderProcessing\Model\CustomOrderProcessing"/>
+    <preference for="Mohith\CustomOrderProcessing\Api\OrderStatusUpdateInterface"
+                type="Mohith\CustomOrderProcessing\Model\OrderStatusUpdate"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="custom_order_processing_grid_data_source" xsi:type="string">Mohith\CustomOrderProcessing\Model\ResourceModel\CustomOrderProcessing\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="Mohith\CustomOrderProcessing\Model\ResourceModel\CustomOrderProcessing\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">custom_order_status_log</argument>
+            <argument name="resourceModel" xsi:type="string">Mohith\CustomOrderProcessing\Model\ResourceModel\CustomOrderProcessing</argument>
+        </arguments>
+    </virtualType>
+</config>

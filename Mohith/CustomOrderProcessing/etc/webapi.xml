@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Webapi/etc/webapi.xsd">
+    <route url="/V2/order/update-status" method="POST">
+        <service class="Mohith\CustomOrderProcessing\Api\OrderStatusUpdateInterface" method="updateStatus"/>
+        <resources>
+            <resource ref="Magento_Sales::manage"/>
+        </resources>
+    </route>
+</routes>
