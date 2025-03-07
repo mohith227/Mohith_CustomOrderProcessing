@@ -4,7 +4,7 @@
 Mohith_CustomOrderProcessing is a custom Magento 2 module that enhances order processing by providing:
 - A REST API for updating order statuses.
 - An event observer that logs order status changes.
-- An admin UI component (grid and form) to manage logged order status changes.
+- An admin UI component (grid) to view logged order status changes.
 - Email notifications for shipped orders.
 
 ---
