@@ -93,6 +93,7 @@ curl -X POST "https://yourmagento.com/rest/V1/order/update-status" \
     "message": "Order not found.",
     "trace": null
 }
+```
 ---
 
 ## Admin Panel UI
