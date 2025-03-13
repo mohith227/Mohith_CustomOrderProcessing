@@ -189,7 +189,6 @@ php bin/magento cache:flush
 - Expects a NoSuchEntityException.
   
 ---
----
 
 ## How to run Unit Testing
 ```sh
@@ -200,7 +199,7 @@ or
 vendor/bin/phpunit app/code/Mohith/CustomOrderProcessing/Test/Unit/Model/OrderStatusUpdateTest.php
 ```
 This test ensures robust validation and error handling in your Magento 2 order status update functionality.
----
+
 ---
 
 ## Contribution & Support
