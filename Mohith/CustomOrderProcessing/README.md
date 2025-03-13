@@ -174,7 +174,33 @@ php bin/magento setup:di:co
 php bin/magento indexer:reindex
 php bin/magento cache:flush
 ```
+---
 
+## Unit Testing
+1. testUpdateStatusSuccessfully
+
+- Mocks a valid order.
+- Ensures the status update is successful.
+- Verifies that the repository save method is called.
+  
+2. testUpdateStatusWithInvalidOrder
+
+- Mocks an invalid order that does not exist.
+- Expects a NoSuchEntityException.
+  
+---
+---
+
+## How to run Unit Testing
+```sh
+php bin/magento dev:tests:run unit
+```
+or
+```sh
+vendor/bin/phpunit app/code/Mohith/CustomOrderProcessing/Test/Unit/Model/OrderStatusUpdateTest.php
+```
+This test ensures robust validation and error handling in your Magento 2 order status update functionality.
+---
 ---
 
 ## Contribution & Support
