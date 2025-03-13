@@ -21,4 +21,10 @@
             <argument name="resourceModel" xsi:type="string">Mohith\CustomOrderProcessing\Model\ResourceModel\CustomOrderProcessing</argument>
         </arguments>
     </virtualType>
+    <type name="Mohith\CustomOrderProcessing\Model\Indexer\OrderStatusIndexer">
+        <arguments>
+            <argument name="resource" xsi:type="object">Magento\Framework\App\ResourceConnection</argument>
+            <argument name="logger" xsi:type="object">Psr\Log\LoggerInterface</argument>
+        </arguments>
+    </type>
 </config>

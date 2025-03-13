@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Indexer/etc/indexer.xsd">
+    <indexer id="custom_order_status_log_indexer" view_id="custom_order_status_log"
+             class="Mohith\CustomOrderProcessing\Model\Indexer\OrderStatusIndexer">
+        <title>Custom Order Status Log Indexer</title>
+        <description>Reindexes order status changes for optimized queries.</description>
+    </indexer>
+</config>
