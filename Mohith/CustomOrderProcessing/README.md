@@ -199,6 +199,7 @@ or
 vendor/bin/phpunit app/code/Mohith/CustomOrderProcessing/Test/Unit/Model/OrderStatusUpdateTest.php
 ```
 This test ensures robust validation and error handling in your Magento 2 order status update functionality.
+
 ---
 
 ## Indexing
@@ -211,11 +212,14 @@ Magento 2 uses indexers to optimize performance and improve scalability. To ensu
 ✅ Flexibility: Can be scheduled, manual, or real-time.
 
 # Run the Indexer
+
 📌 Reindex manually:
 
 ```sh
 php bin/magento indexer:reindex custom_order_status_log_indexer
 ```
+📌 Set it to update on save:
+
 ```sh
 php bin/magento indexer:set-mode realtime custom_order_status_log_indexer
 ```
