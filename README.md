@@ -174,6 +174,55 @@ php bin/magento setup:di:co
 php bin/magento indexer:reindex
 php bin/magento cache:flush
 ```
+---
+
+## Unit Testing
+1. testUpdateStatusSuccessfully
+
+- Mocks a valid order.
+- Ensures the status update is successful.
+- Verifies that the repository save method is called.
+  
+2. testUpdateStatusWithInvalidOrder
+
+- Mocks an invalid order that does not exist.
+- Expects a NoSuchEntityException.
+  
+---
+
+## How to run Unit Testing
+```sh
+php bin/magento dev:tests:run unit
+```
+or
+```sh
+vendor/bin/phpunit app/code/Mohith/CustomOrderProcessing/Test/Unit/Model/OrderStatusUpdateTest.php
+```
+This test ensures robust validation and error handling in your Magento 2 order status update functionality.
+
+---
+
+## Indexing
+Indexing Setup
+
+Magento 2 uses indexers to optimize performance and improve scalability. To ensure efficient order status tracking, we've added indexers to the custom module.
+
+✅ Performance Boost: Indexing speeds up status-based queries.
+✅ Scalability: Works well even if millions of orders exist.
+✅ Flexibility: Can be scheduled, manual, or real-time.
+
+# Run the Indexer
+
+📌 Reindex manually:
+
+```sh
+php bin/magento indexer:reindex custom_order_status_log_indexer
+```
+📌 Set it to update on save:
+
+```sh
+php bin/magento indexer:set-mode realtime custom_order_status_log_indexer
+```
 
 ---
 
