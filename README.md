@@ -20,7 +20,7 @@ app/code/Mohith/CustomOrderProcessing
 ### 2️⃣ Enable the Module
 Run the following commands:
 ```sh
-php bin/magento module:enable Vendor_CustomOrderProcessing
+php bin/magento module:enable Mohith_CustomOrderProcessing
 php bin/magento setup:upgrade
 php bin/magento setup:di:compile
 php bin/magento cache:flush
@@ -29,7 +29,7 @@ php bin/magento cache:flush
 ### 3️⃣ Verify Module Installation
 Check if the module is enabled:
 ```sh
-php bin/magento module:status | grep Vendor_CustomOrderProcessing
+php bin/magento module:status | grep Mohith_CustomOrderProcessing
 ```
 It should return `Vendor_CustomOrderProcessing: Enabled`.
 
